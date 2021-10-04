@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(public navctl:NavController,public toast:ToastController) {
+
+  }
+  doLegal(){
+    this.navctl.navigateForward('/legal-page');
+
+  }
+  doContactUs(){
+    this.navctl.navigateForward('/contact-us');
+
+  }
+  doMyAccount(){
+    this.navctl.navigateForward('/my-account');
+
+  }
+  doReportAnIssue(){
+    this.navctl.navigateForward('/report-an-issue');
+
+  }
+
 }
